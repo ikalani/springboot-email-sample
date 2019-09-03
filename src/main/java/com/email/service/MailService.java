@@ -38,7 +38,7 @@ public void run(String... args) throws MessagingException,IOException {
   void sendEmailWithoutAttachment() {
   
   SimpleMailMessage message = new SimpleMailMessage();
-  message.setTo("imarathnayaka91@gmail.com");
+  message.setTo("receiver@mail.com");
   message.setSubject("Testing from Spring Boot");
   message.setText("Hello World \n Spring Boot Email");
   
@@ -50,7 +50,7 @@ public void run(String... args) throws MessagingException,IOException {
   
   MimeMessage message = javaMailSender.createMimeMessage(); MimeMessageHelper
   helper = new MimeMessageHelper(message, true);
-  helper.setTo("imarathnayaka91@gmail.com");
+  helper.setTo("receiver@mail.com");
   helper.setSubject("Testing from Spring Boot");
   
   helper.setText("<B>Image attached in the email..!</B>", true);
